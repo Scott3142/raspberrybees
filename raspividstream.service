@@ -4,7 +4,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Service]
-ExecStart=/bin/bash -c '/home/pi/software/raspberrybees/runstream.sh cgj5-c84d-cuz6-2a5r'
+ExecStart=/bin/bash -c '/home/pi/runstream.sh ####-####-####-####'
 User=pi
 Restart=on-failure
 
