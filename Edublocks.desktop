@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Edublocks
+Comment=Launches Chromium to Edublocks server
+Icon=/home/pi/software/edublocks/icon.png
+Exec=lxterminal -t "Running Edublocks server..." --working-directory=/home/pi/software/edublocks/server/ -e chromium-browser http://localhost:8081
+Type=Application
+Encoding=UTF-8
+Terminal=False
+Categories=None;
