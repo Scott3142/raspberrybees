@@ -7,7 +7,7 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 ### Installs required packages ###
-sudo apt install tmux
+sudo apt -y install tmux
 
 ### Sets up Edublocks script and moves to Desktop ###
 cp bees.sh /home/pi/
