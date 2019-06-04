@@ -24,3 +24,5 @@ cp runstream.py runstream.sh /home/pi/
 ### Moves system file to correct directory ###
 sudo cp raspividstream.service /etc/systemd/system
 
+cp installedubocks.sh /home/pi
+bash /home/pi/installedubocks.sh
