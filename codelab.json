@@ -1,0 +1,26 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2019-11-10T17:01:52Z",
+  "id": "sound-of-the-bees",
+  "duration": 44,
+  "title": "Sound of the Bees",
+  "authors": "Scott Morgan",
+  "summary": "During this project, you will create a bee-hive monitoring system using a Raspberry Pi, a camera and a microphone.",
+  "source": "1W-Ayc-XEngJ8ikZyij8Zub84viV0A1FWNa8NPFJ7UC4",
+  "theme": "python",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "Python"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "https://github.com/Scott3142/sound-of-the-bees",
+  "ga": "UA-214872164-1",
+  "url": "sound-of-the-bees"
+}

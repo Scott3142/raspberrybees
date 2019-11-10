@@ -1,0 +1,317 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Sound of the Bees</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="UA-214872164-1"
+                  id="sound-of-the-bees"
+                  title="Sound of the Bees"
+                  environment="web"
+                  feedback-link="https://github.com/Scott3142/sound-of-the-bees">
+    
+      <google-codelab-step label="Introduction" duration="2">
+        <p class="image-container"><img style="width: 624.00px" src="img/7619cabb0e41fd1b.png"></p>
+<p><strong>Last Updated:</strong> 2019-11-10</p>
+<h2 is-upgraded><strong>Sound of the Bees</strong></h2>
+<aside class="special"><p>This tutorial will give an overview of a project designed to introduce students to the fundamental concepts of programming while developing a complete project from start to finish for monitoring a bee hive. </p>
+</aside>
+<iframe class="youtube-video" src="https://www.youtube.com/embed/p1JRZLRscZ0?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>This work is a collaborative project between <a href="https://cardiff.ac.uk" target="_blank">Cardiff University</a> and <a href="https://bridgend.ac.uk" target="_blank">Bridgend College</a>. We are grateful to the <a href="https://wellcome.ac.uk" target="_blank">Wellcome Trust</a> for their financial contributions to the project and to <a href="https://www.llanishenfach.co.uk/" target="_blank">Llanishen Fach Primary School</a> for allowing us to trial and test the system.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Coding Circle" duration="5">
+        <h2 is-upgraded><strong>Activity Overview</strong></h2>
+<aside class="special"><p>This activity is designed to introduce the fundamental concepts of programming within a fun, active setting. Students are on their feet and engaging with this activity throughout. </p>
+</aside>
+<iframe class="youtube-video" src="https://www.youtube.com/embed/JVq4q5gw4BA?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>Students form a circle or a line and each one is given a piece of A4 paper with a line of Python code on it. </p>
+<p>Within the code, there will be a <strong>spelling error</strong>, a <strong>variable</strong> definition, an <strong>if statement</strong> and a <strong>loop</strong>. The tutor should discuss these various programming constructs as the students move around the circle. </p>
+<pre><code>print(&#39;Boom!&#39;)
+jump()
+prin(&#39;Test&#39;) #Note deliberate spelling error!
+if &lt;next person is wearing glasses&gt;:
+for n in range(1,3):</code></pre>
+<h2 is-upgraded><strong>Key Concepts:</strong></h2>
+<ul>
+<li>Spelling is critical in programming.</li>
+<li>Variables are used to store information to be used later in the code. </li>
+<li>Conditional if statements ask a question of the computer, and run some code when the condition is met. </li>
+<li>For and while loops can be used to repeat processes iteratively.</li>
+</ul>
+<p><strong>Downloads:</strong></p>
+<p><a href="https://docs.google.com/presentation/d/1xzuF6SNvN6rzKSAberh9Q1W5yxHKO_afsCZ0y9YVcCI/edit?usp=sharing" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download Coding Circle pack</paper-button></a></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Building the Hardware" duration="10">
+        <h2 is-upgraded><strong>Activity Overview</strong></h2>
+<aside class="special"><p>This activity is designed to introduce the students to the process of building simple circuits using the Raspberry Pi, a breadboard, an LED, a button, a resistor and some jumper wires. </p>
+</aside>
+<iframe class="youtube-video" src="https://www.youtube.com/embed/OeuhwVSXAW8?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>During this section of the class, students will assemble their Raspberry Pis and login. There are some excellent ‘Getting Started&#39; resources provided by the Raspberry Pi foundation which can be found below:</p>
+<p><a href="https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started" target="_blank"><paper-button class="colored" raised>Getting Started with Raspberry Pi</paper-button></a></p>
+<p>You might want to try out some physical computing activities first, to get your students familiar with the concepts of wiring a breadboard, a button, an LED and so on. You can find some very thorough tutorials below, for both Scratch (beginner) and Python (more advanced).</p>
+<p><a href="https://projects.raspberrypi.org/en/projects/physical-computing-with-scratch" target="_blank"><paper-button class="colored" raised>Physical Computing with Scratch</paper-button></a></p>
+<p><a href="https://projects.raspberrypi.org/en/projects/physical-computing" target="_blank"><paper-button class="colored" raised>Physical Computing with Python</paper-button></a></p>
+<h2 is-upgraded><strong>Key Concepts:</strong></h2>
+<ul>
+<li>Fundamentals of microcontrollers &amp; the Raspberry Pi</li>
+<li>How power and data is provided/transferred to devices</li>
+<li>Building basic circuits</li>
+</ul>
+<p><strong>Hardware resources:</strong></p>
+<ul>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/" target="_blank">Raspberry Pi 3 (Model B)</a></li>
+<li><a href="https://thepihut.com/products/noobs-preinstalled-sd-card?q=%27NOOBS%27%20Preinstalled%20Micro%20SD%20Card%20(Latest%20v3.2.1)" target="_blank">16GB Micro SD card (with NOOBS installed)</a></li>
+<li><a href="https://www.amazon.co.uk/AmazonBasics-Male-Micro-Cable-Black/dp/B0711PVX6Z/ref=sr_1_3?crid=NPEXNVWO9B3N&keywords=micro+usb+cable+amazonbasics&qid=1573399458&sprefix=micro+usb+cable+amazonba%2Caps%2C145&sr=8-3" target="_blank">Micro USB Lead</a></li>
+<li><a href="https://www.amazon.co.uk/AmazonBasics-High-Speed-Ultra-HDMI-Cable/dp/B014I8SIJY?ref_=fsclp_pl_dp_1" target="_blank">HDMI lead</a></li>
+<li><a href="https://www.amazon.co.uk/TechRise-High-Speed-adapter-Converter-Charging-Black/dp/B01E8DD6J6/ref=pd_sbs_147_t_1/261-8683823-0205156?_encoding=UTF8&pd_rd_i=B01E8DD6J6&pd_rd_r=33df8c34-5867-4a61-8f3b-42973792e10d&pd_rd_w=ayEkl&pd_rd_wg=MjDOA&pf_rd_p=e44592b5-e56d-44c2-a4f9-dbdc09b29395&pf_rd_r=QGFAFZ8KJX3GVDA1QX46&psc=1&refRID=QGFAFZ8KJX3GVDA1QX46" target="_blank">HDMI to VGA converter</a> (if you don&#39;t have monitors with HDMI ports)</li>
+<li><a href="https://camjam.me/?page_id=236" target="_blank">CamJam EduKit 1</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Testing the Camera" duration="10">
+        <h2 is-upgraded><strong>Activity Overview</strong></h2>
+<aside class="special"><p>This activity is designed to introduce the students to the Raspberry Pi camera and the use of command line programming to take photos and videos. We will also introduce the microphone at this step and use it to record audio.</p>
+</aside>
+<iframe class="youtube-video" src="https://www.youtube.com/embed/lpmaHNLuDsw?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2 is-upgraded><strong>Step 1:</strong></h2>
+<p>Before getting started with the camera module, we will have to make sure it is enabled via the config page. To do this, you&#39;ll need to open a Raspberry Pi terminal. You can do that by following the instructions <a href="https://www.raspberrypi.org/documentation/usage/terminal/" target="_blank">here</a>.</p>
+<ul>
+<li>Open a terminal and run:</li>
+</ul>
+<pre><code>sudo raspi-config</code></pre>
+<ul>
+<li>Navigate to <strong><code>Interfacing Options</code></strong><strong> </strong>and select <strong><code>Camera.</code></strong> Select the option to enable the camera and reboot the Pi.</li>
+</ul>
+<h2 is-upgraded><strong>Step 2:</strong></h2>
+<p>Once the camera module is connected, you may want to follow some of the recommended instructions from the Raspberry Pi foundation, available below:</p>
+<p><a href="https://projects.raspberrypi.org/en/projects/getting-started-with-picamera/2" target="_blank"><paper-button class="colored" raised>Getting Started with the Camera Module</paper-button></a></p>
+<h2 is-upgraded>Notes:</h2>
+<p>The code generally reduces to the following two commands:</p>
+<pre><code>raspistill -o picture.jpg</code></pre>
+<p>and</p>
+<pre><code>raspivid -o video.h264 -t 10000</code></pre>
+<p>The first command takes a picture and the second takes a 10 second (10000 milisecond) video and stores them on the Pi.</p>
+<aside class="special"><p><strong>Note: </strong>You can discuss with the students how to stop the command overwriting the previous picture each time here. Labelling the picture with the date and time is a good way to stop this.</p>
+</aside>
+<h2 is-upgraded><strong>Step 3:</strong></h2>
+<p>To record audio with the Pi, you can use the following command. </p>
+<pre><code>arecord -D plughw:1,0 -d 3 audio.wav</code></pre>
+<p>This records 3 seconds of audio and stores it to the Pi. It is recommended to follow the instructions below to check each part of this command is correct for your system.</p>
+<p><a href="http://wiki.sunfounder.cc/index.php?title=To_use_USB_mini_microphone_on_Raspbian" target="_blank"><paper-button class="colored" raised>Getting Started with a USB microphone</paper-button></a></p>
+<h2 is-upgraded><strong>Common Camera Error:</strong></h2>
+<aside class="warning"><p><strong>Note: </strong>When using the camera module for the first time, it is quite common to see the following error.</p>
+</aside>
+<pre><code>mmal: mmal_vc_component_enable: failed to enable component: ENOSPC
+mmal: camera component could not be enabled
+mmal: main: Failed to create camera component
+mmal: Failed to run camera app. Please check for firmware updates</code></pre>
+<p>If this happens, first check that the camera module is enabled with step 1 and reboot the Pi.</p>
+<p>It is possible that the camera connection wire is faulty if this error persists. Unplug the camera module, ensure it is in the correct way around and try with a different camera module or Raspberry Pi. </p>
+<p>There is further information below about troubleshooting this error:</p>
+<p><a href="https://raspberrypi.stackexchange.com/questions/13764/what-causes-enospc-error-when-using-the-raspberry-pi-camera-module" target="_blank">https://raspberrypi.stackexchange.com/questions/13764/what-causes-enospc-error-when-using-the-raspberry-pi-camera-module</a></p>
+<h2 is-upgraded><strong>Key Concepts:</strong></h2>
+<ul>
+<li>Some experience with command line</li>
+<li>Revisiting concepts from Coding Circle activity</li>
+</ul>
+<p><strong>Hardware resources:</strong></p>
+<ul>
+<li><a href="https://thepihut.com/products/raspberry-pi-camera-module?variant=758603005" target="_blank">Raspberry Pi Camera Module</a></li>
+<li><a href="https://www.amazon.co.uk/Richera-Microphone-Notebook-Recognition-Software/dp/B01FJWO5K4/ref=sr_1_5?keywords=small+usb+microphone&qid=1573400655&sr=8-5" target="_blank">USB microphone</a></li>
+<li><a href="https://www.amazon.co.uk/AmazonBasics-Male-Female-Extension-Cable/dp/B00NH11PEY/ref=sr_1_3?keywords=usb+extender+lead&qid=1573400700&sr=8-3" target="_blank">USB extender</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="The Algorithm" duration="15">
+        <h2 is-upgraded><strong>Activity Overview</strong></h2>
+<aside class="special"><p>This activity is designed to bring together the concepts from the previous sections and develop the final system, before testing in class.</p>
+</aside>
+<iframe class="youtube-video" src="https://www.youtube.com/embed/vP9QjA5Ct8k?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>So far, we have assembled the hardware and tested the action of the button using Scatch (or Python) to light an LED and tested our camera module with audio. This section looks to bring all of this together into one command that can be run outside at the hive.</p>
+<p>We need to do a few things to make this possible. </p>
+<ol type="1" start="1">
+<li>Write some code that says ‘<code>if the button is pressed, start the recording</code>&#39; . This will embed many of the concepts from the Coding Circle activity. </li>
+<li>Activate the code to <strong>run when the Pi starts </strong>so that we don&#39;t have to do anything with it outside at the hive. <em>This will let us just plug it into a battery pack, press the button and start the recording.  </em></li>
+<li>Combine the video and audio streams<em> (Optional - not tested)</em>.</li>
+</ol>
+<h2 is-upgraded><strong>Step 1 (Starting the recording when the button is pressed):</strong></h2>
+<h3 is-upgraded>Taking a picture with Python:</h3>
+<p>Following on from the Building the Hardware section, we can use Python to trigger the camera to take a photo when a button is pressed. This is covered by the following code:</p>
+<pre><code>from gpiozero import Button
+from picamera import PiCamera
+from datetime import datetime
+from signal import pause
+import os #required for audio stream
+
+button = Button(2)
+camera = PiCamera()
+
+def capture():
+    timestamp = datetime.now().isoformat()
+    camera.capture(&#39;/home/pi/%s.jpg&#39; % timestamp)
+
+button.when_pressed = capture
+
+pause()</code></pre>
+<p>This code will store the output file as a jpg in the <code>/home/pi/</code> directory on the Pi. Note that we are labelling the image as the date and time to avoid overwriting, as discussed in Building the Hardware.</p>
+<h3 is-upgraded><strong>Taking a video with Python:</strong></h3>
+<p>Capturing a video to a file is similar and can be done in Python as follows:</p>
+<pre><code>from gpiozero import Button
+from picamera import PiCamera
+from datetime import datetime
+from signal import pause
+import os #required for audio stream
+
+button = Button(2)
+camera = PiCamera()
+seconds = 60 #you can change this number
+
+def capture():
+    timestamp = datetime.now().isoformat()
+    camera.resolution = (640, 480)
+    camera.start_recording(&#39;/home/pi/%s.h264&#39; % timestamp)
+    camera.wait_recording(seconds)
+    camera.stop_recording()
+
+button.when_pressed = capture
+
+pause()</code></pre>
+<p>This captures 60 seconds of footage and stores it in the <code>/home/pi/</code> directory on the Pi.</p>
+<h3 is-upgraded><strong>Taking a video and recording audio with Python:</strong></h3>
+<p>You can add the audio stream by adding a line as follows:</p>
+<pre><code>from gpiozero import Button
+from picamera import PiCamera
+from datetime import datetime
+from signal import pause
+import os #required for audio stream
+
+button = Button(2)
+camera = PiCamera()
+seconds = 60 #if you change this, change the 60 in the audio command
+
+def capture():
+    timestamp = datetime.now().isoformat()
+    camera.resolution = (640, 480)
+    camera.start_recording(&#39;/home/pi/%s.h264&#39; % timestamp)
+    camera.wait_recording(seconds)
+    os.system(&#39;arecord -D plughw:1,0 -d 60 audio.wav&#39;) #for audio
+    camera.stop_recording()
+
+button.when_pressed = capture
+
+pause()</code></pre>
+<h2 is-upgraded><strong>Step 2 (Set the code to run when the Pi starts up):</strong></h2>
+<p>There are multiple ways to set your Python file to run when the Raspberry Pi loads up. Firstly, make sure you have the code from <strong>Step 1 </strong>saved on your Pi somewhere that you can find it. It is probably sensible to name it something like <code>startVideo.py</code> and store it in your <code>/home/pi/</code> directory. </p>
+<p>The following tutorial explains 5 different ways to get your program to run at boot (start up):</p>
+<p><a href="https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/" target="_blank"><paper-button class="colored" raised>Five ways to run a program on a Raspberry Pi at start-up</paper-button></a></p>
+<p>From experience, sometimes some of them don&#39;t work, so make sure to test it and use a different method if necessary. </p>
+<aside class="warning"><p><strong>Note: </strong>Always remember to test your device before taking it outside. It will save a lot of headaches if you check first!</p>
+</aside>
+<h2 is-upgraded><strong>[Optional - Not tested] Step 3 (Combining the audio and video streams):</strong></h2>
+<aside class="special"><p><strong>Note: </strong>This step is difficult, so is therefore optional. The alternative is to record the video and audio streams separately and combine them later with basic video editing software. </p>
+</aside>
+<p>This may be one of the trickiest parts of this whole process, and Raspberry Pi don&#39;t really provide an easy way to do this (at least at the time of writing this tutorial). It requires quite a lengthy command that needs to be typed into a terminal. </p>
+<p>It is up to you whether you want the students to type this, or simply copy and paste. At a basic level, it <em>pipes </em>the output of the command <code>raspivid</code> to <code>arecord</code> and combines them together. Here&#39;s the code:</p>
+<pre><code>/usr/bin/raspivid -o - -t 0 -w 1280 -h 720 -vf -fps 40 -b 8000000 -g 40 -n | /usr/bin/ffmpeg -ac 1 -f alsa -ac 1 -i hw:1,0 -f h264 -i pipe:0 -c:v copy -c:a aac -ab 128k -g 40 -f mp4 -r 30 video.mp4</code></pre>
+<aside class="warning"><p><strong>Note: </strong>You will need the program <code>ffmpeg</code> installed on the Raspberry Pi before doing this step. If you&#39;ve purchased a pre-loaded NOOBS SD card, it should have come pre-installed. If you get an error at this step saying that the <code>ffmpeg</code> command is not found, you must install it. You can find instructions for this below.</p>
+</aside>
+<h3 is-upgraded>Installing <code>ffmpeg </code><strong>(only if not installed):</strong></h3>
+<ol type="1" start="1">
+<li>Open a terminal.</li>
+<li>Change to home directory: </li>
+</ol>
+<pre><code>cd ~</code></pre>
+<ol type="1" start="3">
+<li>Download ffmpeg: </li>
+</ol>
+<pre><code>git clone git://source.ffmpeg.org/ffmpeg --depth=1</code></pre>
+<ol type="1" start="4">
+<li>Change to ffmpeg directory: </li>
+</ol>
+<pre><code>cd ffmpeg</code></pre>
+<ol type="1" start="5">
+<li>Configure installation: </li>
+</ol>
+<pre><code>./configure --arch=armel --target-os=linux --enable-gpl --enable-libx264 --enable-nonfree</code></pre>
+<ol type="1" start="6">
+<li>Make the installation: <strong><em>Note this step will take a long time!</em></strong></li>
+</ol>
+<pre><code>make -j4</code></pre>
+<ol type="1" start="7">
+<li>Now finally run the installation: </li>
+</ol>
+<pre><code>sudo make install</code></pre>
+<h2 is-upgraded><strong>The Python file for combined streams: </strong></h2>
+<p>The following code should be saved and stored in the <code>/home/pi/</code> directory.</p>
+<pre><code>from gpiozero import Button
+from signal import pause
+import os #required for audio stream
+
+button = Button(2)
+
+def capture():
+    os.system(&#39;/usr/bin/raspivid -o - -t 0 -w 1280 -h 720 -vf -fps 40 -b 8000000 -g 40 -n | /usr/bin/ffmpeg -ac 1 -f alsa -ac 1 -i hw:1,0 -f h264 -i pipe:0 -c:v copy -c:a aac -ab 128k -g 40 -f mp4 -r 30 video.mp4&#39;) #for audio
+
+button.when_pressed = capture
+
+pause()</code></pre>
+<p>Use <strong>Step 2</strong> to enable this script to run at boot.</p>
+<h2 is-upgraded><strong>Key Concepts:</strong></h2>
+<ul>
+<li>Critical thinking required to form the algorithm</li>
+<li>The order of processes by a computer in a program</li>
+<li>Revisiting concepts from Coding Circle activity</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Conclusion" duration="2">
+        <p>Congratulations, you have reached the end of the tutorial. Good luck!</p>
+<p>If you have any questions, please contact Scott Morgan | <a href="mailto:smorgan@bridgend.ac.uk" target="_blank">smorgan@bridgend.ac.uk</a>.</p>
+<p><strong>Resources &amp; Further Reading:</strong></p>
+<ul>
+<li><a href="https://projects.raspberrypi.org/en/" target="_blank">Raspberry Pi Projects</a></li>
+<li><a href="https://learn.edublocks.org/tutorial/traffic-lights" target="_blank">EduBlocks Traffic Lights</a></li>
+<li><a href="https://gpiozero.readthedocs.io/en/stable/installing.html" target="_blank">GPIO Zero documentation</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>
